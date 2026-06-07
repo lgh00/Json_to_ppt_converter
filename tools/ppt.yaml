@@ -1,0 +1,56 @@
+identity:
+  name: json_to_pptx_converter
+  author: lgh
+  label:
+    en_US: Json to PPTX Converter
+    zh_Hans: Json转PPTX转换器
+    pt_BR: Conversor de Json para PPTX
+description:
+  human:
+    en_US: Convert Json content to a PPTX (PowerPoint) presentation
+    zh_Hans: 将Json内容转换为PPTX（PowerPoint）演示文稿
+    pt_BR: Converter conteúdo Json para uma apresentação PPTX (PowerPoint)
+  llm: A tool that converts Json formatted text into Microsoft PowerPoint PPTX format presentations, maintaining formatting, structure, and supporting basic slide layouts.
+parameters:
+  - name: json_content
+    type: string
+    required: true
+    label:
+      en_US: Json Content
+      zh_Hans: Json内容
+      pt_BR: Conteúdo Json
+    human_description:
+      en_US: The Json content to be converted to PowerPoint presentation
+      zh_Hans: 要转换为PowerPoint演示文稿的Json内容
+      pt_BR: O conteúdo Json a ser convertido para apresentação PowerPoint
+    llm_description: The Json content that will be converted to a PowerPoint presentation
+    form: llm
+  - name: title
+    type: string
+    required: false
+    label:
+      en_US: Presentation Title
+      zh_Hans: 演示文稿标题
+      pt_BR: Título da Apresentação
+    human_description:
+      en_US: The title of the PowerPoint presentation
+      zh_Hans: PowerPoint演示文稿的标题
+      pt_BR: O título da apresentação PowerPoint
+    llm_description: The title that will be used for the PowerPoint presentation
+    form: llm
+  - name: theme
+    type: string
+    required: false
+    label:
+      en_US: Presentation Theme
+      zh_Hans: 演示文稿主题
+      pt_BR: Tema da Apresentação
+    human_description:
+      en_US: The theme/design to use for the presentation (default is 'default')
+      zh_Hans: 演示文稿使用的主题/设计（默认为'default'）
+      pt_BR: O tema/design a ser usado para a apresentação (padrão é 'default')
+    llm_description: The visual theme to apply to the presentation slides
+    form: llm
+extra:
+  python:
+    source: tools/ppt.py
