@@ -125,8 +125,8 @@ class PptTool(Tool):
                         p = tf.paragraphs[0]
                     else:
                         p = tf.add_paragraph()
-                    p.text = line
-                    p.font.name = "微软雅黑"
+                    p.text = "    " + line
+                    p.font.name = "微软雅黑"                
                     p.font.size = Pt(18)
 
         # Save presentation to a bytes buffer
